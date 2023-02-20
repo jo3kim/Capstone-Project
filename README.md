@@ -11,8 +11,12 @@ Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare 
 * Messy/Inconsistent date formats
 * Misleading variable labels
 
+## First Way of Cleaning: Using Excel/Google Sheets
+
+## Second Way of Cleaning: Using SQL
+### Used data set starting with trip_22_02
 #### Duplications
-Quering to find duplicates:
+In order to find duplicates, used the quering to find duplicates:
 ```SQL
 SELECT 
 	ride_id, 
@@ -20,7 +24,7 @@ SELECT
 	start_station_name, 
 	end_station_name
 FROM 
-	
+	22-02
 GROUP BY 
 	ride_id, 
 	start_station_name, 
@@ -28,7 +32,6 @@ GROUP BY
 HAVING 
 	COUNT(ride_id) > 1
 ```
-Query returned 209 rows of duplicated data.
 Data was removed from table through use of `DISTINCT` regaring ride_id  
 `SELECT DISTINCT ride_id`  
   
