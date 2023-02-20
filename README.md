@@ -1,16 +1,15 @@
-# Cleaning Report
-A descriptive report of cleaning and manipulations performed on the dataset.
+# Cleaning 2 Ways Report
+Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare in 2 ways
   
-## Areas of Concern:
+## Cleaning Checklists:
+* Misspelled words
 * Duplications
 * Null data cells
-* Misspelled words
 * Mistyped numbers
 * Mismatched datypes
 * Messy/Inconsistent strings
 * Messy/Inconsistent date formats
 * Misleading variable labels
-* Business Logic
 
 #### Duplications
 Quering to find duplicates:
@@ -21,7 +20,7 @@ SELECT
 	start_station_name, 
 	end_station_name
 FROM 
-	trip_data
+	
 GROUP BY 
 	ride_id, 
 	start_station_name, 
