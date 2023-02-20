@@ -11,6 +11,8 @@ Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare 
 * Misleading variable labels
 
 ## First Way of Cleaning: Using Excel/Google Sheets
+### Used data set starting with trip_22_01
+Because a year's worth of data cannot be imported at once into Excel/Google Sheets due to a large file, indivual monthly datasets need to be cleaned. Or all cleaned in SQL.
 
 ## Second Way of Cleaning: Using SQL (MYSQL 18)
 ### Used data set starting with trip_22_02
@@ -42,7 +44,7 @@ SELECT
 	start_station_name, 
 	end_station_name
 FROM 
-	22-02
+	trip_22-02
 GROUP BY 
 	ride_id, 
 	start_station_name, 
