@@ -2,12 +2,11 @@
 Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare in 2 ways
   
 ## Cleaning Checklists:
+* Column Selection
 * Null data cells
 * Duplications
 * Misspelled words
-* Mistyped numbers
 * Mismatched datypes
-* Messy/Inconsistent strings
 * Messy/Inconsistent date formats
 * Misleading variable labels
 
@@ -15,6 +14,16 @@ Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare 
 
 ## Second Way of Cleaning: Using SQL (MYSQL 18)
 ### Used data set starting with trip_22_02
+
+### Column Selection
+For this project, it was important to select only the necessary columns, to make it easier to skip cleaning processes. These columns were selected for the project:
+  * `ride_id`
+  * `rideable_type`
+  * `started_at`
+  * `ended_at`
+  * `start_station_name`
+  * `end_station_name`
+  * `member_casual`
 
 #### Nulls
 Multiple null cells found in columns:
@@ -45,15 +54,10 @@ Data was removed from table through use of `DISTINCT` regaring ride_id
 `SELECT DISTINCT ride_id`  
  
 #### Misspelled Words
-7 total station_names found with (\*) as a suffix. Appears to be intentional rather than separate inconsistent format. Will not exclude rows.  
-   
-Station_name 'WATSON TESTING - DIVVY' appears, wide range of start and end times, as well as duration. All rideable_type listed as `electric_bike` , and all member_casual listed as `casual`. Account for less than 1% of data. Will remove rows.  
+
+Using the 'WATSON TESTING - DIVVY'
+Station_name 'WATSON TESTING - DIVVY' appears, wide range of start and end times, as well as duration. All rideable_type listed as `electric_bike` , and all member_casual listed as `casual`. 
   
-#### Misspelled Numbers
-Only geographical coordinates are listed as number datatypes.  
-Coordinates are irrelevant to analysis and will be excluded from the cleaned table.  
-  
- 
 #### Mismatched datypes
 String data inconsistent - 2020 data accepted as `nvarchar(50)`, 2021 data accepted as `nvarchar(MAX)`  
 `start_station_name`, `end_station_name` altered to `nvarchar(100)`. Remaining string variables all `nvarchar(50)`
@@ -62,10 +66,7 @@ Date format consistent `datetime`.
 
 #### Misleading variable labels
 `user_type <- member_casual`  
-* `member_casual` narrow in it's description. Variable changed to `user_type`.  
-  
-`bike_type <- rideable_type`  
-* Only bikes are offered to ride. Makes variable more clear.  
+* `member_casual` was not a defining variable. Variable changed to `user_type`.  
   
 ### Current Clean Data Query
 #### updated 2022-19-02 -- bike_trip_clean
