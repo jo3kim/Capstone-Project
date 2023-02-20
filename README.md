@@ -2,9 +2,9 @@
 Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare in 2 ways
   
 ## Cleaning Checklists:
-* Misspelled words
-* Duplications
 * Null data cells
+* Duplications
+* Misspelled words
 * Mistyped numbers
 * Mismatched datypes
 * Messy/Inconsistent strings
@@ -13,8 +13,17 @@ Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare 
 
 ## First Way of Cleaning: Using Excel/Google Sheets
 
-## Second Way of Cleaning: Using SQL
+## Second Way of Cleaning: Using SQL (MYSQL 18)
 ### Used data set starting with trip_22_02
+
+#### Nulls
+Multiple null cells found in columns:
+  * `start_station_name`
+  * `end_station_name`
+  * `member_casual`
+Used the Not Null function to only select rows that do not have null cells in those columns.
+(Could not take out null function during the importing phase, as MYSQL 18 does not allow you to not select the nulls)
+
 #### Duplications
 In order to find duplicates, used the quering to find duplicates:
 ```SQL
@@ -34,19 +43,6 @@ HAVING
 ```
 Data was removed from table through use of `DISTINCT` regaring ride_id  
 `SELECT DISTINCT ride_id`  
-  
-#### Nulls
-Multiple null cells found in columns:
-  * `start_station_name`
-  * `end_station_name`
-  * `start_station_id`
-  * `end_station_id`
-  * `start_lat`
-  * `start_lng`
-  * `end_lat`
-  * `end_lng`
-No way to supplement data. Geographical locations not necessary.  
-Rows with Nulls account for less than 10% of the data, will remove.
  
 #### Misspelled Words
 7 total station_names found with (\*) as a suffix. Appears to be intentional rather than separate inconsistent format. Will not exclude rows.  
@@ -71,13 +67,8 @@ Date format consistent `datetime`.
 `bike_type <- rideable_type`  
 * Only bikes are offered to ride. Makes variable more clear.  
   
-#### Business Logic
-Looking for variables which will point to key behavioural differences between casual riders and annual members.  
-Necessary variables appear to be, `ride_id`, `user_type`, `bike_type`, `start_station_name`, `end_station_name`, `started_at`, `ended_at`, `duration_minutes`.  
-All remaining variables unneccesary for analysis and will be excluded from final table.
-
 ### Current Clean Data Query
-#### updated 2021-07-16 -- trip_data_clean_v3 
+#### updated 2022-19-02 -- bike_trip_clean
   
 ```SQL
 SELECT
@@ -98,9 +89,7 @@ SELECT
 		(start_station_name <> 'WATSON TESTING - DIVVY'
 		AND end_station_name <> 'WATSON TESTING - DIVVY')
 	AND
-		(ended_at - started_at > 0)
-	AND
 		DATEDIFF(second, started_at, ended_at) < 86400
 	AND 
-		DATEDIFF(second, started_at, ended_at) > 59
+		DATEDIFF(second, started_at, ended_at) > 60
     
