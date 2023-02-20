@@ -81,7 +81,7 @@ SELECT
 	ended_at,
 	DATEDIFF(minute, started_at, ended_at) AS duration
  FROM
-	22-01
+	trip_22-02
  WHERE
 		(start_station_name IS NOT NULL 
 		AND end_station_name IS NOT NULL)
