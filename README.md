@@ -14,6 +14,43 @@ Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare 
 ### Used data set starting with trip_22_01
 Because a year's worth of data cannot be imported at once into Excel/Google Sheets due to a large file, indivual monthly datasets need to be cleaned. Or all cleaned in SQL.
 
+### Column Selection
+For this project, it was important to select only the necessary columns, to make it easier to skip cleaning processes. These columns were selected for the project:
+  * `ride_id`
+  * `rideable_type`
+  * `started_at`
+  * `ended_at`
+  * `start_station_name`
+  * `end_station_name`
+  * `member_casual`
+All other columns were deleted.
+
+#### Nulls
+Nulls were found by using the `Filtering` Tool. Multiple null cells found in columns:
+  * `start_station_name`
+  * `end_station_name`
+  * `member_casual`
+By filtering out the nulls (or blanks), rows were deleted.
+
+#### Duplications
+In order to find duplicates, used the quering to find duplicates:
+```Excel/Google Sheets
+
+```
+Data was removed from table through use of `DISTINCT` regaring ride_id  
+`SELECT DISTINCT ride_id`  
+ 
+#### Misspelled Words
+
+  
+#### Mismatched datypes
+Dataypes were not needed to be cleaned with Excel/Google Sheets
+
+#### Misleading variable labels
+`user_type <- member_casual`  
+* `member_casual` was not a defining variable. Variable changed to `user_type`.
+
+
 ## Second Way of Cleaning: Using SQL (MYSQL 18)
 ### Used data set starting with trip_22_02
 
