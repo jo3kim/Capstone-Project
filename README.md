@@ -9,6 +9,7 @@ Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare 
 * Mismatched datypes
 * Inconsistent date formats
 * Confusing variable labels
+* Extra data input
 
 ## First Way of Cleaning: Using Excel/Google Sheets
 ### Used data set starting with trip_22_01
@@ -24,6 +25,7 @@ For this project, it was important to select only the necessary columns, to make
   * `end_station_name`
   * `member_casual`
 All other columns were deleted.
+Added `duration_min` column for the distance in minutes used.
 
 #### Nulls
 Nulls were found by using the `Filtering` tool. Multiple null cells found in columns:
@@ -44,6 +46,12 @@ Dataypes were not needed to be cleaned with Excel/Google Sheets
 #### Confusing variable labels
 `user_type <- member_casual`  
 * `member_casual` was not a defining variable. Variable changed to `user_type`.
+
+#### Extra data input
+Used the `MINUTE` function to find the minutes of duration used in the `duration_min` column:
+`=MINUTE(D2-C2)`
+Then dragged the function down the whole column for results.
+Using the `Filtering` tool any data that was less than 1 minute and over 24 hours of usage was taken out. Less than a minute usage could have been an accident, and over 24 hours of usage could have been due to not closing out the ride.
 
 ## Second Way of Cleaning: Using SQL (MYSQL 18)
 ### Used data set starting with trip_22_02
@@ -83,11 +91,10 @@ GROUP BY
 HAVING 
 	COUNT(ride_id) > 1
 ```
-Data was removed from table through use of `DISTINCT` regarding ride_id  
+`DISTINCT` was then used to filter out the duplicates regarding ride_id:  
 `SELECT DISTINCT ride_id`  
  
 #### Misspelled Words
-
 Using the 'WATSON TESTING - DIVVY'
 Station_name 'WATSON TESTING - DIVVY' appears, wide range of start and end times, as well as duration. All rideable_type listed as `electric_bike` , and all member_casual listed as `casual`. 
   
@@ -100,6 +107,16 @@ Date format consistent to `datetime2`.
 #### Misleading variable labels
 `user_type <- member_casual`  
 * `member_casual` was not a defining variable. Variable changed to `user_type`.  
+
+#### Extra data input
+Added an extra column to show the number of minutes of duration usage as `duration_min':
+`DATEDIFF(minute, started_at, ended_at) AS duration_min`
+Then filtered out any data that was less than 1 minute and over 24 hours of usage. Less than a minute usage could have been an accident, and over 24 hours of usage could have been due to not closing out the ride. The `DATEDIFF` function was used in the `WHERE` clause:
+	`DATEDIFF(minute, started_at, ended_at) < 1440
+AND 
+	DATEDIFF(minute, started_at, ended_at) > 1`
+
+#### Extra data input
   
 ### Current Clean Data Query
 #### updated 2022-19-02 -- bike_trip_clean
@@ -113,7 +130,7 @@ SELECT
 	end_station_name,
 	started_at,
 	ended_at,
-	DATEDIFF(minute, started_at, ended_at) AS duration
+	DATEDIFF(minute, started_at, ended_at) AS duration_min
  FROM
 	trip_22-02
  WHERE
