@@ -7,8 +7,8 @@ Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare 
 * Duplications
 * Misspelled words
 * Mismatched datypes
-* Messy/Inconsistent date formats
-* Misleading variable labels
+* Inconsistent date formats
+* Confusing variable labels
 
 ## First Way of Cleaning: Using Excel/Google Sheets
 ### Used data set starting with trip_22_01
@@ -46,7 +46,7 @@ Data was removed from table through use of `DISTINCT` regaring ride_id
 #### Mismatched datypes
 Dataypes were not needed to be cleaned with Excel/Google Sheets
 
-#### Misleading variable labels
+#### Confusing variable labels
 `user_type <- member_casual`  
 * `member_casual` was not a defining variable. Variable changed to `user_type`.
 
@@ -98,10 +98,10 @@ Using the 'WATSON TESTING - DIVVY'
 Station_name 'WATSON TESTING - DIVVY' appears, wide range of start and end times, as well as duration. All rideable_type listed as `electric_bike` , and all member_casual listed as `casual`. 
   
 #### Mismatched datypes
-String data inconsistent - 2020 data accepted as `nvarchar(50)`, 2021 data accepted as `nvarchar(MAX)`  
-`start_station_name`, `end_station_name` altered to `nvarchar(100)`. Remaining string variables all `nvarchar(50)`
+String data inconsistent - 2020 data accepted as `nvarchar(50)`, 2021 data accepted as `nvarchar(MAX)` or `nvarchar (100)` 
+`start_station_name`, `end_station_name` altered to `nvarchar(100)`. Remaining string variables are all `nvarchar(50)`
  
-Date format consistent `datetime`.
+Date format consistent to `datetime2`.
 
 #### Misleading variable labels
 `user_type <- member_casual`  
@@ -129,7 +129,7 @@ SELECT
 		(start_station_name <> 'WATSON TESTING - DIVVY'
 		AND end_station_name <> 'WATSON TESTING - DIVVY')
 	AND
-		DATEDIFF(second, started_at, ended_at) < 86400
+		DATEDIFF(minute, started_at, ended_at) < 1440
 	AND 
-		DATEDIFF(second, started_at, ended_at) > 60
+		DATEDIFF(minute, started_at, ended_at) > 1
     
