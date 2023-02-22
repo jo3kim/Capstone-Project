@@ -26,22 +26,17 @@ For this project, it was important to select only the necessary columns, to make
 All other columns were deleted.
 
 #### Nulls
-Nulls were found by using the `Filtering` Tool. Multiple null cells found in columns:
+Nulls were found by using the `Filtering` tool. Multiple null cells found in columns:
   * `start_station_name`
   * `end_station_name`
   * `member_casual`
 By filtering out the nulls (or blanks), rows were deleted.
 
 #### Duplications
-In order to find duplicates, used the quering to find duplicates:
-```Excel/Google Sheets
+In order to find duplicates, used the `Remove duplicates` tool under `Data Cleanup`. And also filtered any misspelled words with the `Filtering` tool.
 
-```
-Data was removed from table through use of `DISTINCT` regaring ride_id  
-`SELECT DISTINCT ride_id`  
- 
 #### Misspelled Words
-
+Mispelled words were checked with the `Spelling` tool, and/or using the ChangeCase Extension
   
 #### Mismatched datypes
 Dataypes were not needed to be cleaned with Excel/Google Sheets
@@ -49,7 +44,6 @@ Dataypes were not needed to be cleaned with Excel/Google Sheets
 #### Confusing variable labels
 `user_type <- member_casual`  
 * `member_casual` was not a defining variable. Variable changed to `user_type`.
-
 
 ## Second Way of Cleaning: Using SQL (MYSQL 18)
 ### Used data set starting with trip_22_02
@@ -89,7 +83,7 @@ GROUP BY
 HAVING 
 	COUNT(ride_id) > 1
 ```
-Data was removed from table through use of `DISTINCT` regaring ride_id  
+Data was removed from table through use of `DISTINCT` regarding ride_id  
 `SELECT DISTINCT ride_id`  
  
 #### Misspelled Words
