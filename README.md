@@ -8,7 +8,7 @@ Analysis of the Bike-Share Case Study
 * Key Findings
 * Recommendations
 * Limitations
-* References/Software Usage
+* References/Software
 
 ### Background
 This case study centralizes on working at a bike-sharing company called Cylclistic, to help answer marketing strategies with the marketing team. Cyclistic is located in Chicago that features more than 5,800 bicycles and 600 docking stations with the use of their application. The bikes that are provided includes casual, electric and docked bikes. The company allows people to use their bikes as casual and membership riders. The company was able to gather monthly data and store it through this link:
@@ -26,7 +26,7 @@ With the questions in mind, a business taks formulated to answer this problem: H
 After gathering and cleaning 2022 data (process of data cleaning can be found here: https://github.com/jo3kim/Capstone-Project/blob/main/Cleaning2Ways_README.md), charts were then created to give us these results:
 
 * Member vs Casual Rides Per Month
-![Sheet 1 (1)](https://user-images.githubusercontent.com/123437423/220827518-1d7ecda0-4959-491d-9d30-40eb978fff8a.png)
+
 
 
 * Member vs Casual Rides Per Day
@@ -42,3 +42,9 @@ After gathering and cleaning 2022 data (process of data cleaning can be found he
 3.
 
 ### Limitations
+### References/Software
+
+Software Used
+* MySQL (18)
+* Excel/Google Sheets
+* Tableau (https://public.tableau.com/views/CapstoneProject_16770245020430/MonthCount?:language=en-US&:display_count=n&:origin=viz_share_link)
