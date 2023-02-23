@@ -11,7 +11,7 @@ Analysis of the Bike-Share Case Study
 * References/Software Usage
 
 ### Background
-This case study centralizes on working at a bike-sharing company called Cylclistic, to help answer marketing strategies with the marketing team. Cyclistic is located in Chicago that features more than 5,800 bicycles and 600 docking stations with the use of their application. The bikes that are provided includes casual, electric and static bikes. The company allows people to use their bikes as casual and membership riders. The company was able to gather monthly data and store it through this link:
+This case study centralizes on working at a bike-sharing company called Cylclistic, to help answer marketing strategies with the marketing team. Cyclistic is located in Chicago that features more than 5,800 bicycles and 600 docking stations with the use of their application. The bikes that are provided includes casual, electric and docked bikes. The company allows people to use their bikes as casual and membership riders. The company was able to gather monthly data and store it through this link:
 https://divvy-tripdata.s3.amazonaws.com/index.html
 
 ### Marketing Team Questions/Business Task
