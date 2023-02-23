@@ -24,7 +24,11 @@ With the questions in mind, a business taks formulated to answer this problem: H
 
 ### Data Analysis
 After gathering and cleaning 2022 data (process of data cleaning can be found here: https://github.com/jo3kim/Capstone-Project/blob/main/Cleaning2Ways_README.md), charts were then created to give us these results:
+
 * Member vs Casual Rides Per Month
+![Sheet 1 (1)](https://user-images.githubusercontent.com/123437423/220827518-1d7ecda0-4959-491d-9d30-40eb978fff8a.png)
+
+
 * Member vs Casual Rides Per Day
 * Average Ride Time in Minutes
 * Which Bike is the Most Popular
