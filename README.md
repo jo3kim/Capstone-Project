@@ -11,8 +11,7 @@ Analysis of the Bike-Share Case Study
 * References/Software
 
 ### Background
-This case study centralizes on working at a bike-sharing company called Cylclistic, to help answer marketing strategies with the marketing team. Cyclistic is located in Chicago that features more than 5,800 bicycles and 600 docking stations with the use of their application. The bikes that are provided includes casual, electric and docked bikes. The company allows people to use their bikes as casual and membership riders. The company was able to gather monthly data and store it through this link:
-https://divvy-tripdata.s3.amazonaws.com/index.html
+This case study centralizes on working at a bike-sharing company called Cylclistic, to help answer marketing strategies with the marketing team. Cyclistic is located in Chicago that features more than 5,800 bicycles and 600 docking stations with the use of their application. The bikes that are provided includes casual, electric and docked bikes. The company allows people to use their bikes as casual and membership riders. The company was able to gather monthly data and store it through Amazon Web Services in this link [here](https://divvy-tripdata.s3.amazonaws.com/index.html).
 
 ### Marketing Team Questions/Business Task
 The marketing team want to formulate a business task that answers these 3 questions:
@@ -23,22 +22,30 @@ The marketing team want to formulate a business task that answers these 3 questi
 With the questions in mind, a business taks formulated to answer this problem: How do we increase the number of annual memberships from the casual riders?
 
 ### Data Analysis
-After gathering and cleaning 2022 data (process of data cleaning can be found here: https://github.com/jo3kim/Capstone-Project/blob/main/Cleaning2Ways_README.md), charts were then created to give us these results:
+After gathering and cleaning 2022 data (process of data cleaning can be found [here](https://github.com/jo3kim/Capstone-Project/blob/main/Cleaning2Ways_README.md), charts were then created to give us these results:
 
 * Member vs Casual Rides Per Month
 ![Month Count](https://user-images.githubusercontent.com/123437423/221058561-b3af0c42-662e-4ea8-a82f-bc9dacf005ab.png)
 
+
 * Member vs Casual Rides Per Day
 ![Daily Count](https://user-images.githubusercontent.com/123437423/221058598-819a0b1e-f54e-4399-85a9-a21af74b1f2e.png)
+
 
 * Average Ride Time in Minutes
 ![AVG MIN](https://user-images.githubusercontent.com/123437423/221058619-066aecfe-af73-4c02-90ab-2ff0460d8ec1.png)
 
+
 * Which Bike is the Most Popular
+
 ![Bike Type](https://user-images.githubusercontent.com/123437423/221058643-b26c1a60-2737-4a81-aff6-221abece7dce.png)
 
+
 * Top 30 Start and End Docking Stations
+
 ![Top 30 Start](https://user-images.githubusercontent.com/123437423/221058651-5bdea91f-c88d-4cb5-9101-87e9a9c3a61d.png)
+
+
 ![Top 30 End](https://user-images.githubusercontent.com/123437423/221058666-7854b401-eac8-4aed-b9f5-e120a8b514b6.png)
 
 ### Key Findings
