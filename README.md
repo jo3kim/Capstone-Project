@@ -43,10 +43,12 @@ After gathering and cleaning 2022 data (process of data cleaning can be found [h
 
 * Top 30 Start and End Docking Stations
 
-![Top 30 Start](https://user-images.githubusercontent.com/123437423/221058651-5bdea91f-c88d-4cb5-9101-87e9a9c3a61d.png)
+
+![Top 30 Start](https://user-images.githubusercontent.com/123437423/221061537-5cd3725d-c430-43f7-b655-3bcb95181072.png)
 
 
-![Top 30 End](https://user-images.githubusercontent.com/123437423/221058666-7854b401-eac8-4aed-b9f5-e120a8b514b6.png)
+![Top 30 End](https://user-images.githubusercontent.com/123437423/221061559-473db355-9796-4140-a3f3-21b33286ccd5.png)
+
 
 ### Key Findings
 1. The busiest months for users were May through September.
