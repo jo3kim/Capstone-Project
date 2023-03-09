@@ -29,10 +29,12 @@ After gathering and cleaning 2022 data (process of data cleaning can be found [h
 
 
 * Member vs Casual Rides Per Day
+
 ![Daily Count](https://user-images.githubusercontent.com/123437423/221058598-819a0b1e-f54e-4399-85a9-a21af74b1f2e.png)
 
 
 * Average Ride Time in Minutes
+
 ![AVG MIN](https://user-images.githubusercontent.com/123437423/221058619-066aecfe-af73-4c02-90ab-2ff0460d8ec1.png)
 
 
