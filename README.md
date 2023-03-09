@@ -53,7 +53,7 @@ After gathering and cleaning 2022 data (process of data cleaning can be found [h
 ### Key Findings
 1. The busiest months for users were May through September.
 2. Weekend dates showed more usage with classic bikes being the hottest item. The electric would come next, and docked items were not at all used by members.
-3. 
+3. Top 30 stations used to ride and return the bike rides are shown. There are significant number differences between the top 2 stations in both start and end stations that range in 30,000+ usages. 
 
 ### Recommendations
 1. Promote more advertisements and discounts/promotions for memberships leading up to and in the top 4 months of casual riders. These months are May through August. Technically, when the months become warmer in Chicago, the usage goes up.
@@ -66,7 +66,9 @@ After gathering and cleaning 2022 data (process of data cleaning can be found [h
 3. No basic income data or reference data was provided to see how pricing can change membership increase or continual usage.
 
 ### References/Software
-Software Used
+Software Used:
 * MySQL (18)
 * Excel/Google Sheets
 * Tableau (https://public.tableau.com/views/CapstoneProject_16770245020430/MonthCount?:language=en-US&:display_count=n&:origin=viz_share_link)
+* Data provided by AWS database
+
