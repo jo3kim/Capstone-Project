@@ -1,6 +1,9 @@
 # Capstone Project: Bike-Share
 Analysis of the Bike-Share Case Study
 
+![Bikeshare Pic](https://user-images.githubusercontent.com/123437423/224172325-dfbcaf49-61f0-45d1-baec-fe69b0ef882d.PNG)
+
+
 ## Context
 * Background  
 * Marketing Team Questions/Business Task
