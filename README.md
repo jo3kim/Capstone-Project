@@ -5,27 +5,29 @@ Analysis of the Bike-Share Case Study
 
 
 ## Context
-* Background  
-* Marketing Team Questions/Business Task
-* Data Analysis
-* Key Findings
-* Recommendations
-* Limitations
-* References/Software
+1. Background  
+2. Marketing Team Questions/Business Task
+3. Data Analysis
+4. Key Findings
+5. Recommendations
+6. Limitations
+7. References/Software
 
-### Background
-This case study centralizes on working at a bike-sharing company called Cylclistic, to help answer marketing strategies with the marketing team. Cyclistic is located in Chicago that features more than 5,800 bicycles and 600 docking stations with the use of their application. The bikes that are provided includes casual, electric and docked bikes. The company allows people to use their bikes as casual and membership riders. The company was able to gather monthly data and store it through Amazon Web Services in this link [here](https://divvy-tripdata.s3.amazonaws.com/index.html).
+## Background
+This case study centralizes on working at a bike-sharing company called Cylclistic on helping to answer marketing strategies with the marketing team. Cyclistic is located in Chicago and features more than 5,800 bicycles and 600 docking stations with the use of their mobile application. The different type of bikes that they provide includes casual, electric and docked bikes. The company allows people to use their bikes as casual or membership riders. The company was able to gather monthly data and store it through Amazon Web Services located in this link [here](https://divvy-tripdata.s3.amazonaws.com/index.html).
 
-### Marketing Team Questions/Business Task
+## Marketing Team Questions/Business Task
 The marketing team want to formulate a business task that answers these 3 questions:
-1. How do annual members and causual riders use Cyyclistic bikes differentl?
-2. Would casual riders buy Cyclistic annual memberships?
+1. How do annual members and causual riders use Cyclistic bikes different?
+2. How do we get casual riders to buy Cyclistic annual memberships?
 3. How can Cyclistic use digital media to influence casual riders to become members?
 
-With the questions in mind, a business taks formulated to answer this problem: How do we increase the number of annual memberships from the casual riders?
+With these questions in mind, a business task was formulated to answer this problem: 
 
-### Data Analysis
-After gathering and cleaning 2022 data (process of data cleaning can be found [here](https://github.com/jo3kim/Capstone-Project/blob/main/Cleaning2Ways_README.md), charts were then created to give us these results:
+How do we increase the number of annual memberships compared to the casual riders?
+
+## Data Analysis
+After gathering and cleaning the 2022 data (process of data cleaning can be found [here](https://github.com/jo3kim/Capstone-Project/blob/main/Cleaning2Ways_README.md), charts were then created to give us these results:
 
 * Member vs Casual Rides Per Month
 ![Month Count](https://user-images.githubusercontent.com/123437423/221058561-b3af0c42-662e-4ea8-a82f-bc9dacf005ab.png)
@@ -55,22 +57,22 @@ After gathering and cleaning 2022 data (process of data cleaning can be found [h
 ![Top 30 End](https://user-images.githubusercontent.com/123437423/221061559-473db355-9796-4140-a3f3-21b33286ccd5.png)
 
 
-### Key Findings
+## Key Findings
 1. The busiest months for users were May through September.
 2. Weekend dates showed more usage with classic bikes being the hottest item. The electric would come next, and docked items were not at all used by members.
 3. Top 30 stations used to ride and return the bike rides are shown. There are significant number differences between the top 2 stations in both start and end stations that range in 30,000+ usages. 
 
-### Recommendations
-1. Promote more advertisements and discounts/promotions for memberships leading up to and in the top 4 months of casual riders. These months are May through August. Technically, when the months become warmer in Chicago, the usage goes up.
+## Recommendations
+1. Promote more advertisements and discounts/promotions for memberships leading up to and in the top 4 months for casual riders. These months are May through August. Technically, when the months become warmer in Chicago, the usage goes up.
 2. Increase advertisements and discounts/promotions on the weekend dates rather than the weekday dates.
-3. Target marketing advertisements and posters near the top 30 start and end stations.
+3. Target marketing advertisements and posters near and those who live nearby the top 30 start and end stations.
 
-### Limitations
-1. Data provided does not provide how much the bikes cost to use or any plans for membership fees. This could help differentiate if it is more cost effective to become a member. 
+## Limitations
+1. Data does not provide how much the bikes cost to use or any plans for membership fees. This could help differentiate if it is more cost effective to become a member. 
 2. No age or gender data was provided to determine which group to target or focus more on.
 3. No basic income data or reference data was provided to see how pricing can change membership increase or continual usage.
 
-### References/Software
+## References/Software
 Software Used:
 * MySQL (18)
 * Excel/Google Sheets
