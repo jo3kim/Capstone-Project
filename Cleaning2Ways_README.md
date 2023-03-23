@@ -2,21 +2,21 @@
 Descriptive report on cleaning the data downloaded from the cylcylist_bikeshare in 2 ways
   
 ## Cleaning Checklists:
-* Column Selection
-* Null data cells
-* Duplications
-* Misspelled words
-* Mismatched datypes
-* Inconsistent date formats
-* Confusing variable labels
-* Extra data input
+1. Column selection
+2. Null data cells
+3. Duplications
+4. Misspelled words
+5. Mismatched datypes
+6. Inconsistent date formats
+7. Confusing variable labels
+8. Extra data input
 
 ## First Way of Cleaning: Using Excel/Google Sheets
-### Used data set starting with trip_22_01
+#### Used data set starting with trip_22_01
 Because a year's worth of data cannot be imported at once into Excel/Google Sheets due to a large file, indivual monthly datasets need to be cleaned. Or all cleaned in SQL.
 
 ### Column Selection
-For this project, it was important to select only the necessary columns, to make it easier to skip cleaning processes. These columns were selected for the project:
+For this project, it was important to select only the necessary columns, to make it easier to skip the cleaning processes. These columns were selected for the project:
   * `ride_id`
   * `rideable_type`
   * `started_at`
@@ -25,7 +25,7 @@ For this project, it was important to select only the necessary columns, to make
   * `end_station_name`
   * `member_casual`
 All other columns were deleted.
-Added `duration_min` column for the distance in minutes used.
+Added `duration_min` column for the distance in minutes used. This can be found by using the difference equation of started_at and ended_at columns.
 
 #### Nulls
 Nulls were found by using the `Filtering` tool. Multiple null cells found in columns:
@@ -57,7 +57,7 @@ Using the `Filtering` tool any data that was less than 1 minute and over 24 hour
 ### Used data set starting with trip_22_02
 
 ### Column Selection
-For this project, it was important to select only the necessary columns, to make it easier to skip cleaning processes. These columns were selected for the project:
+For this project, it was important to select only the necessary columns, to make it easier for the cleaning processes. These columns were selected for the project:
   * `ride_id`
   * `rideable_type`
   * `started_at`
@@ -67,12 +67,12 @@ For this project, it was important to select only the necessary columns, to make
   * `member_casual`
 
 #### Nulls
+Used the Not Null function to only select rows that do not have null cells in those columns.
+(Could not take out null function during the importing phase, as MYSQL 18 does not allow you to not select the nulls)
 Multiple null cells found in columns:
   * `start_station_name`
   * `end_station_name`
   * `member_casual`
-Used the Not Null function to only select rows that do not have null cells in those columns.
-(Could not take out null function during the importing phase, as MYSQL 18 does not allow you to not select the nulls)
 
 #### Duplications
 In order to find duplicates, used the quering to find duplicates:
@@ -116,8 +116,6 @@ Then filtered out any data that was less than 1 minute and over 24 hours of usag
 AND 
 	DATEDIFF(minute, started_at, ended_at) > 1`
 
-#### Extra data input
-  
 ### Current Clean Data Query
 #### updated 2022-19-02 -- bike_trip_clean
   
