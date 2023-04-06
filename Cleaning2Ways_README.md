@@ -50,6 +50,7 @@ Dataypes were not needed to be cleaned with Excel/Google Sheets
 #### Extra data input
 Used the `MINUTE` function to find the minutes of duration used in the `duration_min` column:
 `=MINUTE(D2-C2)`
+
 Then dragged the function down the whole column for results.
 Using the `Filtering` tool any data that was less than 1 minute and over 24 hours of usage was taken out. Less than a minute usage could have been an accident, and over 24 hours of usage could have been due to not closing out the ride.
 
